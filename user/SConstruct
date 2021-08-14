@@ -1,0 +1,11 @@
+env = Environment(
+    CCFLAGS = [
+        '-Wall', '-Werror',
+        '-fdiagnostics-color=always',
+    ],
+)
+
+env.Program(
+    target = 'testapp',
+    source = ['testapp.c'],
+)
