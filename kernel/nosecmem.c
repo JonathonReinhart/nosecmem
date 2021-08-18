@@ -27,8 +27,7 @@ static size_t file_size(struct file *file)
 
 static int handle_secretmem_file(struct file *file)
 {
-    struct inode *inode = file_inode(file);
-    const unsigned long len = inode->i_size;
+    const unsigned long len = file_size(file);
     void *map = NULL;
     int ret = 0;
 
