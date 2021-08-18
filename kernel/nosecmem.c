@@ -33,9 +33,9 @@ static int handle_secretmem_file(struct file *file)
 
     map = (void *) vm_mmap(file, 0, len, PROT_READ, MAP_SHARED, 0);
     if (IS_ERR(map)) {
-        long err = PTR_ERR(map);
-        pr_err("vm_mmap() failed: %ld\n", err);
-        ret = -ENOMEM;
+        ret = PTR_ERR(map);
+        map = NULL;
+        pr_err("vm_mmap() failed: %d\n", ret);
         goto out;
     }
 
