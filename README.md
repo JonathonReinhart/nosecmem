@@ -48,6 +48,8 @@ do exactly what it is intended to do: Provide stronger guarantees about the
 protection of the memory. The intent of this project is to ensure that its
 limitations are well-understood.
 
+Tested on `v5.14-rc5-221-gdfa377c35d70`.
+
 # Usage
 
 ### Prerequisites
