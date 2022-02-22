@@ -225,8 +225,8 @@ static ssize_t nosecmem_write(struct file *file, const char __user *buf,
 }
 
 static const struct proc_ops nosecmem_ops = {
-	.proc_write = nosecmem_write,
-	.proc_lseek = default_llseek,
+    .proc_write = nosecmem_write,
+    .proc_lseek = default_llseek,
 };
 
 #define PROCNAME    MODNAME
@@ -241,7 +241,7 @@ static int __init kmod_init(void)
         return -ENOMEM;
     }
 
-	pr_info("Write a PID to /proc/"PROCNAME" to see all of the "
+    pr_info("Write a PID to /proc/"PROCNAME" to see all of the "
             "\"secret memory\" areas for that process.\n");
     return 0;
 }
