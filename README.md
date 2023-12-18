@@ -55,14 +55,12 @@ Tested on `v5.14-rc5-221-gdfa377c35d70`.
 ### Prerequisites
 - You need to be running a v5.14-rc1 or newer kernel.
 - You need to boot your kernel with the command-line option `secretmem.enable=1`.
-- You need SCons (for the test app), GCC, Make, and kernel headers.
+- You need GCC, Make, and kernel headers.
 
 ### Build Test App
 ```
 $ cd user/
-$ scons
-  <or>
-$ gcc -Wall -Werror -o testapp testapp.c
+$ make
 ```
 
 ### Build Kernel Module
